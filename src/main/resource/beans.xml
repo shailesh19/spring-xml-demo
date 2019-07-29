@@ -11,10 +11,8 @@
       <property name="actor" ref="actor"></property>
   </bean>
 
-  <bean id="movie2" class="com.stackroute.domain.Actor">
-      <constructor-arg index="0" value="23"></constructor-arg>
-      <constructor-arg index="1" value="Arun"></constructor-arg>
-      <constructor-arg index="2" value="male"></constructor-arg>
+  <bean id="BeanLifecycleDemoBean" class="com.stackroute.domain.BeanLifecycleDemoBean" init-method="customInit" destroy-method="customDestroy">
+      <property name="message" value="Property Message"></property>
   </bean>
 
 </beans>

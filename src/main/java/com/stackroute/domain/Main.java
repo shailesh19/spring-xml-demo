@@ -2,6 +2,7 @@ package com.stackroute.domain;
 
 import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.io.ClassPathResource;
 
@@ -14,8 +15,9 @@ public class Main
         Movie movie = (Movie) context.getBean("movie");
         System.out.println(movie);
 
-        Movie movie1 = (Movie) context.getBean("movie2");
-        System.out.println(movie1);
-
+        ConfigurableApplicationContext context1 = new ClassPathXmlApplicationContext("beans.xml");
+        BeanLifecycleDemoBean beanLifecycleDemoBean = (BeanLifecycleDemoBean) context1.getBean("BeanLifecycleDemoBean");
+        System.out.println(beanLifecycleDemoBean);
+        context1.close();
     }
 }
