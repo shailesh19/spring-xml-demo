@@ -19,5 +19,16 @@
         <constructor-arg name="gender" index="2" type="String" value="male"></constructor-arg>
     </bean>
 
+    <bean id="movie" class="com.stackroute.domain.Movie">
+        <property name="author" value="shailesh"></property>
+    </bean>
+
+    <bean id="movie2" class="com.stackroute.domain.Movie">
+        <property name="author" value="gokul"></property>
+    </bean>
+
+    <bean id="movie3" class="com.stackroute.domain.Movie">
+        <property name="author" value="atul"></property>
+    </bean>
 
 </beans>
