@@ -15,4 +15,6 @@
       <property name="message" value="Property Message"></property>
   </bean>
 
+    <bean id="BeanPostProcessorDemoBean" class="com.stackroute.domain.BeanPostProcessorDemoBean"></bean>
+
 </beans>

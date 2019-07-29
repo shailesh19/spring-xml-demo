@@ -15,9 +15,11 @@ public class Main
         Movie movie = (Movie) context.getBean("movie");
         System.out.println(movie);
 
-        ConfigurableApplicationContext context1 = new ClassPathXmlApplicationContext("beans.xml");
-        BeanLifecycleDemoBean beanLifecycleDemoBean = (BeanLifecycleDemoBean) context1.getBean("BeanLifecycleDemoBean");
+        ConfigurableApplicationContext configurableApplicationContext = new ClassPathXmlApplicationContext("beans.xml");
+        BeanLifecycleDemoBean beanLifecycleDemoBean = (BeanLifecycleDemoBean) configurableApplicationContext.getBean("BeanLifeCycleDemoBean");
+        BeanPostProcessorDemoBean beanPostProcessorDemoBean=(BeanPostProcessorDemoBean) configurableApplicationContext.getBean("BeanPostProcessorDemoBean") ;
+        System.out.println(beanPostProcessorDemoBean);
         System.out.println(beanLifecycleDemoBean);
-        context1.close();
+        configurableApplicationContext.close();
     }
 }
