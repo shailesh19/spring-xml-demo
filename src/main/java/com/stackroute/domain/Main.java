@@ -11,24 +11,12 @@ public class Main
     {
         ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
 
-        Actor actor = context.getBean("actor",Actor.class);
-        System.out.println(actor);
-
-        XmlBeanFactory xmlBeanFactory = new XmlBeanFactory(new ClassPathResource("beans.xml"));
-        Actor actor1 = xmlBeanFactory.getBean("actor",Actor.class);
-        System.out.println(actor1);
-
-        Actor actor2 = xmlBeanFactory.getBean("actor2",Actor.class);
-        System.out.println(actor2);
-
-        Actor actor3 = context.getBean("actor3",Actor.class);
-        System.out.println(actor3);
-
-        Movie movie = context.getBean("movie",Movie.class);
+        Movie movie =(Movie) context.getBean("movie");
         System.out.println(movie);
 
-        Movie movie1 = context.getBean("movie2",Movie.class);
-        System.out.println(movie==movie1);
+        Movie movie1 =(Movie) context.getBean("movie1");
+        System.out.println(movie1);
 
+        System.out.println(movie==movie1);
     }
 }

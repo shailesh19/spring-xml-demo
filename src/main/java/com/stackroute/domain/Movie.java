@@ -2,32 +2,32 @@ package com.stackroute.domain;
 
 public class Movie
 {
-    private String author;
+    private Actor actor;
 
     public Movie()
     {
     }
 
-    public Movie(String author)
+    public Movie(Actor actor)
     {
-        this.author = author;
+        this.actor = actor;
+    }
+
+    public Actor getActor()
+    {
+        return actor;
+    }
+
+    public void setActor(Actor actor)
+    {
+        this.actor = actor;
     }
 
     @Override
     public String toString()
     {
         return "Movie{" +
-                "author='" + author + '\'' +
+                "actor=" + actor +
                 '}';
-    }
-
-    public String getAuthor()
-    {
-        return author;
-    }
-
-    public void setAuthor(String author)
-    {
-        this.author = author;
     }
 }

@@ -17,7 +17,6 @@ public class Actor
         this.gender = gender;
     }
 
-
     public int getAge()
     {
         return age;
