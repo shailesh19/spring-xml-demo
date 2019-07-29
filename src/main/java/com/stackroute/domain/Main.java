@@ -21,5 +21,8 @@ public class Main
         Actor actor2 = xmlBeanFactory.getBean("actor2",Actor.class);
         System.out.println(actor2);
 
+        Actor actor3 = context.getBean("actor3",Actor.class);
+        System.out.println(actor3);
+
     }
 }

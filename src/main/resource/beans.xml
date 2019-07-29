@@ -8,9 +8,16 @@
     </bean>
 
     <bean id = "actor2" class="com.stackroute.domain.Actor">
-        <property name="age" value="33"></property>
+        <property name="age" value="23"></property>
         <property name="name" value="Anil Tutika"></property>
-        <property name="gender" value="female"></property>
+        <property name="gender" value="male"></property>
     </bean>
+
+    <bean id = "actor3" class="com.stackroute.domain.Actor">
+        <constructor-arg name="age" index="0" type="int" value="23"></constructor-arg>
+        <constructor-arg name="name" index="1" type="String" value="Aniket"></constructor-arg>
+        <constructor-arg name="gender" index="2" type="String" value="male"></constructor-arg>
+    </bean>
+
 
 </beans>
