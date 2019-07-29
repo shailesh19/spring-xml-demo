@@ -1,6 +1,6 @@
 package com.stackroute.domain;
 
-public class Actor
+public class Actor extends Movie
 {
     private int age;
     private String name;
